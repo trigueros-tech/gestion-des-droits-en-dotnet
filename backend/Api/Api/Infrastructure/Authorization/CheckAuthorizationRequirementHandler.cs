@@ -1,4 +1,3 @@
-using System.Linq;
 using System.Reflection;
 using System.Security.Claims;
 using System.Threading;
@@ -6,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.AspNetCore.Routing;
 
 namespace Api.Infrastructure.Authorization
 {

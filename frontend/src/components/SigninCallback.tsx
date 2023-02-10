@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { useHistory } from "react-router";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import { userManager } from "../utils/authentication";
 
 const SigninCallback = () => {
 
-  const history = useHistory();
-  
+  const navigate = useNavigate();
+
   useEffect(() => {
-    userManager.signinCallback().then(() => history.push("/"));
-  }, [history]);
+    userManager.signinCallback().then(() => navigate("/"));
+  }, [navigate]);
 
   return <h1>Sign in callback</h1>;
 };

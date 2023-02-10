@@ -1,6 +1,6 @@
 import React, { useEffect, useState, FC } from "react";
 import { userManager } from "../utils/authentication";
-import { User } from "oidc-client";
+import { User } from "oidc-client-ts";
 
 const UnknownHome = () => {
   return (
@@ -26,7 +26,7 @@ const AuthenticatedHome: FC<{ user: User }> = ({ user }) => {
       setContent(responseText);
     }
   };
-  
+
   return (
     <>
       <h1>Welcome {user.profile.preferred_username}</h1>

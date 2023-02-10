@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { useHistory } from "react-router";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import { userManager } from "../utils/authentication";
 
 const SignoutCallback = () => {
   
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    userManager.signoutCallback().then(() => history.push("/"));
-  }, [history]);
+    userManager.signoutCallback().then(() => navigate("/"));
+  }, [navigate]);
 
   return <h1>Sign out callback</h1>;
 };
